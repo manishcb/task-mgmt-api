@@ -13,7 +13,6 @@ class TasktoUserController extends Controller
    function addtasktouser(Request $req)
    {
 
-    // this is the comment section
        $rules=array(
        'user'=>"required",    
        'task_admin_name'=>"required",
