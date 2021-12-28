@@ -9,7 +9,7 @@ use App\Models\User_task_progress_master; // import model
 use App\Models\Taskmaster; // import model
 use App\Models\User_task_progress_detail; // import model
 
-class TasktoUserController extends Controller
+class TaskProgressController extends Controller
 {
    //
    function addtasktime(Request $req)
