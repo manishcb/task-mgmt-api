@@ -18,8 +18,12 @@ class CreateUserTaskProgressDetailsTable extends Migration
             $table->integer('task_id');
             $table->date('task_start_date');
             $table->time('task_start_time');
+            $table->time('task_pause_date');
             $table->time('task_pause_time');
+            $table->time('task_stop_date');
             $table->time('task_stop_time');
+            $table->time('task_resume_date');
+            $table->time('task_resume_time');
             $table->integer('task_break_mnts');
             $table->timestamps();
             $table->foreign('task_id')->references('task_id')->on('user_task_progress_masters')
