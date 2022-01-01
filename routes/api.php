@@ -10,7 +10,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\TasktoUserController;
-
+use App\Http\Controllers\TaskProgressController;
+use App\Http\Controllers\TaskFetchController;
 
 
 /*
@@ -54,6 +55,9 @@ Route::post('addtasktouser', [TasktoUserController::class, 'addtasktouser']);
 Route::get('checktasktouser', [TasktoUserController::class, 'checktasktouser']
 );
 Route::get('removeassigntask',[TasktoUserController::class,'removeassigntask']); 
+
+
+Route::get('getallassigntask',[TaskFetchController::class,'fetchtask']); 
 
 
 
