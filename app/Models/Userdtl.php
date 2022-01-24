@@ -14,6 +14,11 @@ class Userdtl extends Model
         'email',
         'designation',
         'password',
+        'dashboard',
+        'createuser',
+        'task',
+        'forms'
+
 
     ];
 

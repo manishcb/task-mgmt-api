@@ -32,6 +32,8 @@ return array(
     'App\\Models\\Taskmaster' => $baseDir . '/app/Models/Taskmaster.php',
     'App\\Models\\Tasktouser' => $baseDir . '/app/Models/Tasktouser.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
+    'App\\Models\\User_form_detail' => $baseDir . '/app/Models/User_form_detail.php',
+    'App\\Models\\User_form_master' => $baseDir . '/app/Models/User_form_master.php',
     'App\\Models\\User_task_progress_detail' => $baseDir . '/app/Models/User_task_progress_detail.php',
     'App\\Models\\User_task_progress_master' => $baseDir . '/app/Models/User_task_progress_master.php',
     'App\\Models\\Userdtl' => $baseDir . '/app/Models/Userdtl.php',

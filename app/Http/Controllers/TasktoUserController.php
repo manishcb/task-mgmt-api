@@ -17,14 +17,11 @@ class TasktoUserController extends Controller
        'user'=>"required",    
        'task_admin_name'=>"required",
        'task_id'=>"required",
+       'task_create_date'=>"required",
        'task'=>"required",
-       'task_start_date'=>"required",
-       'task_start_time'=>"required",
-       'task_end_date'=>"required",
-       'task_end_time'=>"required",
        'task_duration_mnts'=>"required",
+       'task_end_date'=>"required",
        'task_priority'=>"required",
-       'task_remarks'=>"required",
        
        );
        
@@ -52,12 +49,10 @@ class TasktoUserController extends Controller
             'name'=>$user_array,
             'task_admin_name'=>$req->task_admin_name,
             'task_id' => $req->task_id,
+            'task_create_date' =>date('Y-m-d',strtotime($req->task_create_date)),
             'task'=>$req->task,
-            'task_start_date' =>date('Y-m-d',strtotime($req->task_start_date)),
-            'task_start_time'=>$req->task_start_time,
-            'task_end_date'=>date('Y-m-d',strtotime($req->task_end_date)),
-            'task_end_time'=>$req->task_end_time,
             'task_duration_mnts'=>$req->task_duration_mnts,
+            'task_end_date'=>date('Y-m-d',strtotime($req->task_end_date)),
             'task_priority'=>$req->task_priority,
             'task_remarks'=>$req->task_remarks,
 

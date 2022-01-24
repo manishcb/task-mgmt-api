@@ -11,14 +11,17 @@ class Taskmaster extends Model
     public $timestamps = false; 
     protected $fillable = [
     'task_admin_name',
-    'task',
-    'task_create_date',
     'task_start_date',
-    'task_start_time',
-    'task_end_date',
-    'task_end_time',
+    'task',
+    //'task_create_date',
+    //'task_start_time',
     'task_duration_mnts',
+    'task_end_date',
+    //'task_end_time',
     'task_priority',
     'task_remarks',
+    'work_location',
+    'lati',
+    'longi',
     ];
 }
