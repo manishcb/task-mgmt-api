@@ -10,6 +10,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\TasktoUserController;
+use App\Http\Controllers\UserFormController;
 
 
 
@@ -47,13 +48,27 @@ Route::get('delete-user/{id}',[UserController::class,'deleteUser']);
 
 // All API for Add, Edit, Update and Delete Task
 Route::post('newtask', [TaskController::class, 'newtask']);
+Route::post('update_task', [TaskController::class, 'update_task']);
 Route::get('all-task',[TaskController::class,'alltask']);
+Route::get('delete-task/{id}',[TaskController::class,'deleteTask']); 
+
+
 
 // All API for Add task to user
 Route::post('addtasktouser', [TasktoUserController::class, 'addtasktouser']);
 Route::get('checktasktouser', [TasktoUserController::class, 'checktasktouser']
 );
 Route::get('removeassigntask',[TasktoUserController::class,'removeassigntask']); 
+
+
+// User defined form section
+// createform
+//Route::post('createform', [TaskController::class, 'createform']);
+// create user form using controller
+Route::post('createform', [UserFormController::class, 'createform']);
+Route::get('getallform',[UserFormController::class,'getallform']); 
+Route::get('getformdata',[UserFormController::class,'getFormData']); 
+Route::get('delete-form/{formname}',[UserFormController::class,'deleteForm']); 
 
 
 

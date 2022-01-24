@@ -42,6 +42,12 @@ class UserController extends Controller
         $user->email=$req->email;
         $user->designation=$req->designation;
         $user->password=$req->password;
+
+        $user->dashboard=$req->dashboard;
+        $user->createuser=$req->createuser;
+        $user->task=$req->task;
+        $user->forms=$req->forms;
+
         $data=$user->save();
         if($data)
         {
@@ -63,9 +69,10 @@ class UserController extends Controller
 
    function allusers()
     {
-        // get all data from carmodels table with model
+        // get all data from Userdtl table with model
         
-        $allusers=Userdtl::all();
+        //$allusers=Userdtl::all();
+        $allusers=Userdtl::orderBy('id', 'desc')->get();
         return response()->json([
               "success"=>true,
               "data"=>$allusers
@@ -119,18 +126,52 @@ class UserController extends Controller
     // post API to update  data for an existing user
     function update_newuser(Request $req)
     {
+        $data[] = [
+            'name'=>$req->name,
+            'email'=>$req->email,
+            'designation'=>$req->designation,
+            'dashboard'=>$req->dashboard,
+            'createuser'=>$req->createuser,
+            'task'=>$req->task,
+            'forms'=>$req->forms,
+
+           ];
+
        $data=Userdtl::find($req->id); 
        $data->name=$req->name;
        $data->email=$req->email;
        $data->designation=$req->designation;
        $data->password=$req->password;
+       
+       if($req->dashboard==0)
+       $data->dashboard=0;
+       else
+       $data->dashboard=1;
+
+       if($req->createuser==0)
+       $data->createuser=0;
+       else
+       $data->createuser=1;
+
+       if($req->task==0)
+       $data->task=0;
+       else
+       $data->task=1;
+       
+
+       if($req->forms==0)
+       $data->forms=0;
+       else
+       $data->forms=1;
+       
        $data->save();
        
        if($data)
        {
-       return response()->json(
+        return response()->json(
            [
-               'success'=>true
+               'success'=>true,
+               'data'=>$data
            ]
            );
        }

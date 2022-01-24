@@ -557,6 +557,8 @@ class ComposerStaticInite22054669a2fc6b33f81f9c45614dbb7
         'App\\Models\\Taskmaster' => __DIR__ . '/../..' . '/app/Models/Taskmaster.php',
         'App\\Models\\Tasktouser' => __DIR__ . '/../..' . '/app/Models/Tasktouser.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Models\\User_form_detail' => __DIR__ . '/../..' . '/app/Models/User_form_detail.php',
+        'App\\Models\\User_form_master' => __DIR__ . '/../..' . '/app/Models/User_form_master.php',
         'App\\Models\\User_task_progress_detail' => __DIR__ . '/../..' . '/app/Models/User_task_progress_detail.php',
         'App\\Models\\User_task_progress_master' => __DIR__ . '/../..' . '/app/Models/User_task_progress_master.php',
         'App\\Models\\Userdtl' => __DIR__ . '/../..' . '/app/Models/Userdtl.php',
